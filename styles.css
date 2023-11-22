@@ -1,0 +1,65 @@
+:root {
+    padding: 0px;
+    margin: 0px;
+
+    overflow: hidden;
+
+    /* Palette by Slynyrd: https://lospec.com/palette-list/steam-lords */
+    background-color: #2f213b;
+    color: #a0b9ba;
+
+    font-family: "JetBrains Mono", monospace;
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    height: 100vh;
+    display: flex;
+    /* overflow: hidden; */
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.scroll-selector-box{
+    font-size: 5vw;
+    display: flex;
+    width: 300%;
+    overflow-x: hidden;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.scroll-selector {
+    font-weight: 700;
+    margin-left: 5px;
+    /* font-size: 10rem; */
+    /* width: 10rem; */
+    height: 1em;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+.scroll-selector-container {
+    width: 0.7em;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    border: 2px, solid, #00ae5a;
+    
+}
+
+.scroll-selector-item {
+    /* width: 1rem; */
+    line-height: 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 2s cubic-bezier(.47,0,.15,1);
+    transform: translateY(0);
+}
