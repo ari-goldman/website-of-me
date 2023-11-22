@@ -32,13 +32,14 @@ var selectors = document.querySelectorAll(".scroll-selector")
 
 var timeAtLastChange = 0
 document.addEventListener("wheel", function(e) {
+    console.log(e.deltaX)
     let d = new Date()
     if(d.getTime() - timeAtLastChange < 2000) return
     
     var incdec
-    if(e.deltaY <= -50){
+    if(e.deltaX <= -50){
         incdec = -1
-    }else if(e.deltaY >= 50){
+    }else if(e.deltaX >= 50){
         incdec = 1
     }else{
         return;
@@ -83,20 +84,6 @@ const scrollToLetter = (selectorItem, char) => {
         selectorItem.style.transform = `translateY(${1.5}em)`
 }
 
-
-const colorSelector = (selector, begin, end) => {
-    selectorContainers = selector.querySelectorAll('.scroll-selector-container')
-    for(var i = 0; i < selectorItems.length; i++){
-        if(i >= begin && i < end){
-            // console.warn(tabColorsSelected[parseInt(selectorItems[i].getAttribute('data-tab'))])
-            selectorContainers[i].style.color = tabColorsSelected[parseInt(selectorContainers[i].getAttribute('data-tab'))]
-        }else{
-            selectorContainers[i].style.color = tabColorsUnelected[parseInt(selectorContainers[i].getAttribute('data-tab'))]
-        }
-    }
-}
-
-
 const assignTabs = (selector, initial) => {
     var curTab = 0
     selectorContainers = selector.querySelectorAll('.scroll-selector-container')
@@ -116,9 +103,10 @@ const assignTabs = (selector, initial) => {
 const setTab = (selector, t) => {
     scrollToRepeatingString(selector,tabSquish.substring(tabIndices[t], tabSquish.length) + tabSquish.substring(0, tabIndices[t]))
     assignTabs(selector, t)
-    colorSelector(selector, 0, tabs[t].length)
     selector.setAttribute('data-tab-selected',`${t}`)
 }
+
+
 
 selectors.forEach((selector) => {
     setTab(selector, 0)
