@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <script src="scroll-selector-script.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains+Mono">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Kanit">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="scroll-selector-styles.css">
 </head>
 <body>
-    <div id="main">
+    <navbar id="selector-nav">
         <div class="scroll-selector-box">
-            <div class="scroll-selector" data-tab-selected="0"></div>
+            <div class="scroll-selector" data-tab-selected='0'></div>
+        </div>
+    </navbar>
+    <div data-tab-selected='0' id="main-content">
+        <div class="tab" data-tab-index='0'>
+            <h1>something about me</h1>
+        </div>
+        <div class="tab" data-tab-index='1'>
+            <h1>some stuff i've done</h1>
+        </div>
+        <div class="tab" data-tab-index='2'>
+            <h1>these are my links</h1>
+        </div>
+        <div class="tab" data-tab-index='3'>
+            <h1>i'm kinda good at these things</h1>
         </div>
     </div>
 </body>

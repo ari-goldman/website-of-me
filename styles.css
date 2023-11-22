@@ -25,99 +25,19 @@ body {
     margin: 0;
 }
 
-#main {
-    width: 100vw;
+.hidden {
+    opacity: 0;
+}
+
+.shown {
+    opacity: 100;
+}
+
+.tab {
+    width: 100%;
+    /* height: 100px; */
+    transition: opacity 1s cubic-bezier(.31,.9,.65,.98);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
     justify-content: center;
-
+    position: absolute;
 }
-
-.scroll-selector-box{
-    margin: 0.25em;
-    font-size: 5vw;
-    display: flex;
-    width: 300%;
-    overflow-x: hidden;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.scroll-selector {
-    font-weight: 700;
-    /* font-size: 10rem; */
-    /* width: 10rem; */
-    height: 1.3em;
-    display: flex;
-    flex-direction: row;
-    overflow-y: hidden;
-    cursor: pointer;
-    user-select: none;
-    transform: scaleY(2vh);
-}
-
-.scroll-selector-container {
-    width: 0.7em;
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    transition: background-color, 1000ms, ease-out;
-    /* background-color: rgba(0,0,0,0); */
-}
-
-/* .scroll-selector-container:hover {
-    background-color: #131313;
-} */
-
-.scroll-selector-item {
-    /* width: 1rem; */
-    line-height: 1.5em;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    /* transition-property: transform, color; */
-    transition: transform 2s cubic-bezier(.47,0,.15,1), color 1s cubic-bezier(.47,0,.15,1);
-    /* transition-duration: 2s;
-    transition-timing-function: cubic-bezier(.47,0,.15,1); */
-    transform: translateY(0) translate(0,0);
-}
-
-.scroll-selector[data-tab-selected='0'] .scroll-selector-container[data-tab='0'] {
-    color: var(--tab-0-selected);
-}
-.scroll-selector[data-tab-selected='1'] .scroll-selector-container[data-tab='1'] {
-    color: var(--tab-1-selected);
-}
-.scroll-selector[data-tab-selected='2'] .scroll-selector-container[data-tab='2'] {
-    color: var(--tab-2-selected);
-}
-.scroll-selector[data-tab-selected='3'] .scroll-selector-container[data-tab='3'] {
-    color: var(--tab-3-selected);
-}
-
-.scroll-selector:not([data-tab-selected='0']) .scroll-selector-container[data-tab='0'] {
-    color: var(--tab-0-unselected);
-}
-/* .scroll-selector:not([data-tab-selected='0']) .scroll-selector-container[data-tab='0']:hover {
-    color: var(--tab-0-selected);
-} */
-.scroll-selector:not([data-tab-selected='1']) .scroll-selector-container[data-tab='1'] {
-    color: var(--tab-1-unselected);
-}
-/* .scroll-selector:not([data-tab-selected='1']) .scroll-selector-container[data-tab='1']:hover {
-    color: var(--tab-1-selected);
-} */
-.scroll-selector:not([data-tab-selected='2']) .scroll-selector-container[data-tab='2'] {
-    color: var(--tab-2-unselected);
-}
-/* .scroll-selector:not([data-tab-selected='2']) .scroll-selector-container[data-tab='2']:hover {
-    color: var(--tab-2-selected);
-} */
-.scroll-selector:not([data-tab-selected='3']) .scroll-selector-container[data-tab='3'] {
-    color: var(--tab-3-unselected);
-}
-/* .scroll-selector:not([data-tab-selected='3']) .scroll-selector-container[data-tab='3']:hover {
-    color: var(--tab-3-selected);
-} */
