@@ -46,6 +46,7 @@ body {
     flex-direction: row;
     overflow-y: hidden;
     cursor: pointer;
+    user-select: none;
 }
 
 .scroll-selector-container {

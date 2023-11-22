@@ -9,8 +9,6 @@ tabs.forEach((tab) => {
     tabIndices.push(tabSquish.length)
     tabSquish += tab
 })
-
-console.log(tabs, tabSquish, tabIndices)
 const charsPerSelector = tabSquish.length
 
 const fillScrollSelector = (chars) => {
@@ -53,12 +51,8 @@ document.addEventListener("wheel", function(e) {
         t += incdec
         t %= tabs.length
         if(t < 0) t = tabs.length - 1
-        // console.log(selectors,t)
-        // scrollToWord(selector,tabs[t])
         setTab(selector, t)
     })
-    // console.log(currentSelection)
-    // scrollTimeout = setTimeout(() => { return }, 2000); // Adjust the timeout duration as needed
 })
 
 const scrollToRepeatingString = (selector, string) => {
@@ -120,7 +114,6 @@ const assignTabs = (selector, initial) => {
 }
 
 const setTab = (selector, t) => {
-    console.log("Tab set to " + t)
     scrollToRepeatingString(selector,tabSquish.substring(tabIndices[t], tabSquish.length) + tabSquish.substring(0, tabIndices[t]))
     assignTabs(selector, t)
     colorSelector(selector, 0, tabs[t].length)
