@@ -5,10 +5,13 @@
     overflow: hidden;
 
     /* Palette by Slynyrd: https://lospec.com/palette-list/steam-lords */
-    background-color: #2f213b;
+    background-color: #1b1b1b;
     color: #a0b9ba;
 
     font-family: "JetBrains Mono", monospace;
+
+    --selected-tab: rgb(255,0,64);
+    --unselected-tab: rgb(122,0,32);
 }
 
 body {
@@ -36,13 +39,13 @@ body {
 
 .scroll-selector {
     font-weight: 700;
-    margin-left: 5px;
     /* font-size: 10rem; */
     /* width: 10rem; */
     height: 1em;
     display: flex;
     flex-direction: row;
     overflow-y: hidden;
+    cursor: pointer;
 }
 
 .scroll-selector-container {
@@ -50,7 +53,6 @@ body {
     display: flex;
     /* align-items: center; */
     justify-content: center;
-    border: 2px, solid, #00ae5a;
     
 }
 
@@ -60,6 +62,8 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    transition: transform 2s cubic-bezier(.47,0,.15,1);
+    transition-property: transform, color;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(.47,0,.15,1);
     transform: translateY(0);
 }
