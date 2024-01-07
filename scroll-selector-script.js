@@ -1,6 +1,5 @@
 const alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * ( ) { } [ ] < > - + _ = : ; \" ' , . ? / \\"
 const alphabetSpaceless = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*(){}[]<>-+_=:;\"',.?/\\"
-const junk = ''
 const tabs = ['about','skills','portfolio','links']
 const tabColorsSelected = ['#ea323c','#5ac54f','#00cdf9','#ca52c9']
 const tabColorsUnelected = ['#571c27','#134c4c','#00396d','#3b1443']
@@ -122,5 +121,5 @@ const setTab = (selector, t) => {
 
 
 selectors.forEach((selector) => {
-    setTab(selector, 0)
+    setTab(selector, 2)
 })
