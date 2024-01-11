@@ -113,12 +113,12 @@ p.text>a:hover {
     border-radius: 2vw;
     width: 100%;
     transition: filter ease-out 500ms;
-    filter: blur(5px) brightness(100%);
+    filter: blur(5px) brightness(60%);
     object-fit: cover;
 }
 
 .portfolio-card > a > img:hover {
-    filter: blur(0px) brightness(60%);
+    filter: blur(0px) brightness(100%);
 }
 
 .portfolio-name {
