@@ -1,5 +1,29 @@
-const alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * ( ) { } [ ] < > - + _ = : ; \" ' , . ? / \\"
-const alphabetSpaceless = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*(){}[]<>-+_=:;\"',.?/\\"
+// https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/
+const shuffle = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+};
+
+const alphabetList = ['A', 'B', 'C', 'D', 'E', 
+                    'F', 'G', 'H', 'I', 'J', 
+                    'K', 'L', 'M', 'N', 'O', 
+                    'P', 'Q', 'R', 'S', 'T', 
+                    'U', 'V', 'W', 'X', 'Y', 
+                    'Z', '0', '1', '2', '3', 
+                    '4', '5', '6', '7', '8', 
+                    '9', '!', '@', '#', '$', 
+                    '%', '^', '&', '*', '(', 
+                    ')', '{', '}', '[', ']', 
+                    '<', '>', '-', '+', '_', 
+                    '=', ':', ';', '"', "'", 
+                    ',', '.', '?', '/', '\\']
+
+shuffle(alphabetList)
+const alphabet = alphabetList.join(' ')
+const alphabetSpaceless = alphabet.replace(/ /g,'')
 const tabs = ['about','skills','portfolio','links']
 const tabColorsSelected = ['#ea323c','#5ac54f','#00cdf9','#ca52c9']
 const tabColorsUnelected = ['#571c27','#134c4c','#00396d','#3b1443']

@@ -40,6 +40,7 @@ ul {
     z-index: 0;
     opacity: 0;
     user-select: none;
+    height: 0px;
 }
 
 .tab.shown {
@@ -50,7 +51,7 @@ ul {
 }
 
 .tab {
-    /* width: 100%; */
+    width: 84vw;
     /* border: #ea323c; */
     overflow-x: visible;
     /* border-left: 2px dashed black; */
@@ -71,6 +72,15 @@ ul {
     padding-left: 1vw;
     transition: color 250ms cubic-bezier(.75,0,.25,1);
     user-select: none;
+}
+
+.links-text {
+    font-size: 4vw; 
+    width: 100%;
+}
+
+.links-text:nth-child(even) {
+    text-align: right;
 }
 
 .text:hover {
@@ -95,17 +105,14 @@ p.text>a:hover {
 .portfolio-card {
     margin: 0vw 0vw 3vw 0vw;
     border-radius: 2vw;
-    width: 80vw;
+    width: 84vw;
     height: 40vw;
     position: relative;
-    /* border: 2px dashed #5ac54f; */
-    /* overflow: hidden; */
 }
 
 .portfolio-card > a {
     width: 100%;
     height: 100%;
-    /* position: relative;; */
     display: flex;
 }
 
