@@ -41,6 +41,7 @@ ul {
     opacity: 0;
     user-select: none;
     height: 0px;
+    overflow-y: hidden;
 }
 
 .tab.shown {

@@ -54,30 +54,30 @@ const fillScrollSelector = (chars) => {
 fillScrollSelector(charsPerSelector)
 var selectors = document.querySelectorAll(".scroll-selector")
 
-var timeAtLastChange = 0
-document.addEventListener("wheel", function(e) {
-    let d = new Date()
-    if(d.getTime() - timeAtLastChange < 2000) return
+// var timeAtLastChange = 0
+// document.addEventListener("wheel", function(e) {
+//     let d = new Date()
+//     if(d.getTime() - timeAtLastChange < 2000) return
     
-    var incdec
-    if(e.deltaX <= -50){
-        incdec = -1
-    }else if(e.deltaX >= 50){
-        incdec = 1
-    }else{
-        return;
-    }
-    timeAtLastChange = d.getTime()
+//     var incdec
+//     if(e.deltaX <= -50){
+//         incdec = -1
+//     }else if(e.deltaX >= 50){
+//         incdec = 1
+//     }else{
+//         return;
+//     }
+//     timeAtLastChange = d.getTime()
 
    
-    selectors.forEach((selector) => {
-        let t = parseInt(selector.getAttribute('data-tab-selected'))
-        t += incdec
-        t %= tabs.length
-        if(t < 0) t = tabs.length - 1
-        setTab(selector, t)
-    })
-})
+//     selectors.forEach((selector) => {
+//         let t = parseInt(selector.getAttribute('data-tab-selected'))
+//         t += incdec
+//         t %= tabs.length
+//         if(t < 0) t = tabs.length - 1
+//         setTab(selector, t)
+//     })
+// })
 
 const scrollToRepeatingString = (selector, string) => {
     string = ("" + string).toUpperCase()
