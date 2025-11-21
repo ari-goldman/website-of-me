@@ -6,12 +6,15 @@
     <title>ari goldman</title>
     <script src="script.js" defer></script>
     <script src="scroll-selector-script.js" defer></script>
+    <script src="chrome-check.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains+Mono">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Kanit">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="scroll-selector-styles.css">
+    <link rel="stylesheet" href="chrome-check.css">
 </head>
 <body>
+    <p id="chrome-warning" class="hidden"><i>hey! looks like you're not on a chromium based browser...<br>the site still works, but the text just looks a little funny!</i></p>
     <navbar id="selector-nav">
         <div class="scroll-selector-box">
             <div class="scroll-selector" data-tab-selected='0'></div>
@@ -96,6 +99,16 @@
         </div>
         <div class="tab hidden" data-tab-index='2'>
             <div class="portfolio-card">
+                <a href="https://github.com/ari-goldman/island-generator" target="_blank"><img src="images/island.jpg"></a>
+                <div class="portfolio-name"><p class="portfolio-text" style="mix-blend-mode: normal;">OpenGL Island Generator and Erosion Sim</p></div>
+                <div class="portfolio-description"><p class="portfolio-text" style="mix-blend-mode: normal;">generates islands and simulates hydraulic erosion on the GPU</p></div>
+            </div>
+            <div class="portfolio-card">
+                <a href="https://github.com/ari-goldman/trackmania-pbrt" target="_blank"><img src="images/trackmania.webp"></a>
+                <div class="portfolio-name"><p class="portfolio-text" style="mix-blend-mode: normal;">Physically Based Ray Tracing Render</p></div>
+                <div class="portfolio-description"><p class="portfolio-text">renders out a scene of Trackmania cars racing down a street using PBRTv4</p></div>
+            </div>
+            <div class="portfolio-card">
                 <a href="https://goobst.itch.io/asciicoditor" target="_blank"><img src="images/asciicoditor.png"></a>
                 <div class="portfolio-name"><p class="portfolio-text">// ASCIICODITOR</p></div>
                 <div class="portfolio-description"><p class="portfolio-text">ASCII/Unicode art editor created in Godot</p></div>
@@ -112,8 +125,8 @@
             </div>
             <div class="portfolio-card">
                 <a href="https://github.com/ari-goldman/ff-stonks" target="_blank"><img src="images/ff-stonks.png"></a>
-                <div class="portfolio-name"><p class="portfolio-text">FF-Stonks</p></div>
-                <div class="portfolio-description"><p class="portfolio-text">software that allows users to easily track live stock prices, provided by the Finnhub API</p></div>
+                <div class="portfolio-name"><p class="portfolio-text" style="mix-blend-mode: normal;">FF-Stonks</p></div>
+                <div class="portfolio-description"><p class="portfolio-text" style="mix-blend-mode: normal;">software that allows users to easily track live stock prices, provided by the Finnhub API</p></div>
             </div>
             <div class="portfolio-card">
                 <a href="https://ari-goldman.github.io/splitting-shapes/" target="_blank"><img src="images/shapes.png"></a>

@@ -1,0 +1,14 @@
+#chrome-warning.hidden {
+    display: none;
+}
+
+#chrome-warning {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+#chrome-warning::before,#chrome-warning::after {
+    content: " [!!!] ";
+    color: orange;
+}
