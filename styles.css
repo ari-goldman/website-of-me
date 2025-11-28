@@ -75,6 +75,23 @@ ul {
     user-select: none;
 }
 
+.text-important {
+    color: var(--tab-0-selected);
+    text-decoration: none;
+    border-left: 2px transparent;
+    padding-left: 1vw;
+    transition: color 250ms cubic-bezier(.75,0,.25,1);
+    user-select: none;
+}
+
+.about-tab b {
+    color: var(--tab-0-selected)
+}
+
+.skills-tab b {
+    color: var(--tab-1-selected)
+}
+
 .links-text {
     font-size: 4vw; 
     width: 100%;

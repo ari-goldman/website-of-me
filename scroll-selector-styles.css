@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: column;
     /* transition-property: transform, color; */
-    transition: transform 2s cubic-bezier(.47,0,.15,1), color 1s cubic-bezier(.47,0,.15,1);
+    transition: transform 1s cubic-bezier(.47,0,.15,1), color 1s cubic-bezier(.47,0,.15,1);
     transform: translateY(0) translate(0,0);
 }
 
